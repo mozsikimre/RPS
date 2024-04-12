@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login-style.css">
+    <link rel="icon" href="..\favicon.png" type="image/x-icon">
+    <title>Login</title>
+  </head>
+  <body>
+
+  <!-- BACKGROUND VIDEO -->
+  <video autoplay muted loop id="bg-video">
+      <source src="..\Assets\Backgrounds\black_low.mp4" type="video/mp4">
+  </video>
+
+  <div class="board">
+
+    <!-- ERROR MESSAGE -->
+    <div class="error-container">Hiba</div>
+    
+    <!-- FORM -->
+    <form method="post" autocomplete="off" action="login.html">
+      <div class="user-icon" title="Back to Main page"></div>
+        
+        <!-- username/email -->
+      <div class="input">
+        <input type="text" name="usernameemail" id="usernameemail" required value="" placeholder=" ">
+          <div class="label">
+            <div class="email"></div>
+            <label for="usernameemail">Email</label>
+          </div>
+      </div>
+
+      <!-- password -->
+      <div class="input">
+        <input type="password" name="password" id="password" required value="" placeholder=" ">
+          <div class="label">
+              <div class="lock"></div>
+              <label for="password">Password</label>
+          </div>
+      </div>
+
+      <!-- submit -->
+      <input type="submit" value="Login" class="login-button" name="submit">     
+    </form>
+      
+    <!-- forget password -->
+    <button class="forgot-password">Forgot password?</button>
+    
+    <!-- REGISTER -->
+    <a href="registration.html" class="registration">Registration</a>
+  </div>
+
+    <script src="forgot-password.js"></script>
+    <script src="jump.js"></script>
+  </body>
+</html>

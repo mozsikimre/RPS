@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* B o d y */
+
+html{
+  -webkit-tap-highlight-color: transparent;
+}
+
+:root{
+  --timing: 200ms ease-in-out;
+  --font-color: rgba(255,255,255,1);
+  --secondary-color: rgba(255,255,255,0.2);
+  --shadow: 0px 0px 6px 1px rgba(0,0,0,0.2);
+}
+
+#bg-video{
+  position: absolute;
+  z-index: 0;
+  object-fit: cover;
+  width:100%;
+  height:100%;
+  filter: blur(7px);
+}
+
+body{
+  background: black;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: var(--font-color);
+  height: 100vh;
+
+}
+
+.board{
+  z-index: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  } 
+
+/* F o r m */
+
+form{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--secondary-color);
+    width: 20rem;
+    height: 28rem;
+    border-radius: 25px;
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    transition: width var(--timing), height var(--timing), padding var(--timing);
+}
+
+/* U s e r  I c o n */
+
+.user-icon{
+    background: url(../Assets/Icons/Default/user.png);
+    background-size: cover;
+    background-position: center;
+    height: 80px;
+    width: 80px;
+    align-self: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    transition: width var(--timing), height var(--timing), margin var(--timing), scale var(--timing);
+    cursor: pointer;
+}
+
+.user-icon:hover{
+  scale: 1.1;
+}
+
+/* L a b e l */
+
+.label {
+  display: flex;
+  position: absolute;
+  height: 100%;
+  align-items: center;
+  transition: 300ms ease;
+  left: 35px;
+
+  }
+  
+label {
+  display: block;
+  font-size: 12pt;
+  color: #b0b0b0;
+  cursor: pointer;
+  user-select: none;
+  }
+ 
+/* I n p u t */  
+
+.input {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 20px 0 20px 0;
+
+}
+  
+input {
+  width: 80%;
+  padding: 8px 0;
+  border: none;
+  border-bottom: 3px solid #ffffff;
+  transition: 300ms;
+  font-size: 12pt;
+  font-weight: 300;
+  background-color: transparent;
+  align-self: center;
+  color: var(--font-color);
+}
+
+input:focus {
+  outline: none;
+}
+
+input:focus + .label,
+input:not(:placeholder-shown) + .label{
+  transform: translateY(-27px);
+}
+  
+input:focus + .label label,
+input:not(:placeholder-shown) + .label label {
+  font-weight: 500;
+  color: white;
+}
+
+input:focus + .label .email,
+input:not(:placeholder-shown) + .label .email,
+input:focus + .label .lock,
+input:not(:placeholder-shown) + .label .lock{
+
+  filter: brightness(1);
+}
+
+/* L o g i n  B u t t o n */
+
+.login-button{
+  border: 1px var(--font-color) solid;
+  border-radius: 100px;
+  background-color: var(--secondary-color);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  margin-top: 5rem;
+  user-select: none;
+}
+
+.login-button:hover{
+  background-color: rgba(255, 255, 255, 0.7);
+}
+  
+/* F o r g o t  P a s s */
+
+.forgot-password{
+  font-size: 9pt;
+  cursor: pointer;
+  position: absolute;
+  background: none;
+  border: none;
+  color: var(--font-color);
+  top: 68%;
+  left: 13%;
+  user-select: none;
+}
+
+.forgot-password:hover{
+  color: white;
+  font-weight: bold;
+  
+}
+
+/* E r r o r */
+
+.error-container {
+  color: white;
+  font-size: 14pt;
+  margin: 10% 0 10% 0;
+  width: 350;
+  height: 50px;
+  text-align: center;
+  
+}
+
+.error-message{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--secondary-color);
+  border-radius: 15px;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow);
+  font-weight: 300;
+}
+
+.error-message img{
+  width: 19px;
+  height: 19px;
+  margin-right: 7pt;
+}
+
+/* R e g i s t r a t i o n */
+
+.registration{
+  width: 300px;
+  height: 50px;
+  border-radius: 0 0 15px 15px;
+  background: rgba(255, 255, 255, 0.15);
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: rgba(255,255,255,0.7);
+  transition: background-color var(--timing), color var(--timing), font-weight var(--timing), height var(--timing), width var(--timing);
+  user-select: none;
+}
+
+.registration:hover{
+  color: rgba(255,255,255,1);
+  height: 60px;
+}
+
+/* I n p u t  I c o n s */
+
+.email{
+  width: 20px;
+  height: 20px;
+  background: url(../Assets/Icons/Default/mail.png);
+  background-size: cover;
+  background-position: center;
+  margin-right: 7px;
+  filter: brightness(0.7);
+  cursor: pointer;
+}
+
+.lock{
+  background: url(../Assets/Icons/Default/lock.png);
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+  background-position: center;
+  margin-right: 7px;
+  margin-right: 7px;
+  filter: brightness(0.7);
+}
+
+@media (max-width: 750px),
+(max-width: 500px) and (resolution: 200dpi) {
+  /* Form */
+  form{
+    width: 14rem;
+    height: 19rem;
+    padding: 1.5rem;
+  }
+
+  /* User Icon */
+  .user-icon{
+    height: 3.5rem;
+    width: 3.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  /*Label*/
+  .label {
+    left: 25px;
+  }
+  
+  label{
+    font-size: 10pt;
+  }
+
+  /* Input */
+  .input{
+    margin: 15px 0 15px 0;
+  
+  }
+    
+  input{
+    padding: 8px 0;
+    font-size: 10pt;
+  }
+  
+  input:focus + .label,
+  input:not(:placeholder-shown) + .label{
+    transform: translateY(-20px);
+  }
+
+  /* Login Button */
+  .login-button{
+    margin-top: 3rem;
+  }
+
+  /* Registration Button */
+  .registration{
+    width: 12rem;
+    height: 3rem;
+    font-size: 10pt;
+  }
+    
+  .registration:hover{
+    height: 3.5rem;
+  }
+    
+  /*Error */
+  .error-container {
+    width: 100%;
+    height: 2.5rem;
+  }
+    
+  .error-message{
+    height: 100%;
+    font-size: 10pt;
+  }
+    
+  .error-message img{
+    width: 1rem;
+    height: 1rem;
+    margin-right: 7pt;
+  }
+   
+  /* Forget password */
+  .forgot-password{
+    font-size: 7pt;
+    top: 67%;
+    left: 15%;
+  }
+}
