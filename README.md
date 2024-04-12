@@ -10,10 +10,17 @@ Ez a projekt egy egyszerű, böngészőben futtatható Kő, Papír, Olló játé
 - **Pontszámok és statisztikák:** A képernyő közepén fent található egy pontszámláló, amely mutatja az ember és a gép közötti pontkülönbséget, valamint egy statisztika, mely megjeleníti, hogy a játékos mennyiszer választott kőt, papírt vagy ollót.
 - **Eredmény kiírás:** A játékmenet során az aktuális kör eredményét egy szöveges kiírásban jeleníti meg a képernyőn. A színváltás a különböző eredményeket jelzi: piros a vesztés, zöld a nyerés, szürke a döntetlen.
 - **Easter egg:** A képernyő bal alsó sarkában található szignó egy easter egg-re kattintva különleges, saját készítésű háttér jelenik meg.
+
+# PHP és MySQL kiegészítés
+
+#### *A Github statikus weboldalak kezelésére alkalmas, így a fent említett verzió csak otthoni használattal próbálható ki.*
+- **Felhasználókezelés:** A projekt PHP és MySQL segítségével lehetőséget biztosít a felhasználók regisztrációjára és bejelentkeztetésére. Az adatokat egy MySQL adatbázisban tárolja.
+- **Játékállás szinkronizálás:** A játék lehetőséget biztosít a játékállás automatikus mentésére és a felhasználó bejelentkezésével történő szinkronizálására. Így a felhasználó bármikor folytathatja a játékot, ahol abbahagyta.
+- **Téma preferencia:** A felhasználó által választott oldal-téma preferenciáját is tárolja, így bejelentkezés után automatikusan beállítja az oldal megjelenését a felhasználó preferenciái szerint.
 ## ⛓️ Játék
 
  - [Indítás](https://mozsikimre.github.io/RPS/)
- 
+ - [Kiegészített verzió](https://drive.google.com/file/d/1FQ5VP4-QthER9jEAb1XnLucuJM5_q9xE/view?usp=drive_link) *(megfeleő adatbázis-környezet kialakításával működtethető)*
 
 
 ## 🚀 Rólam
