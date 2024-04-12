@@ -31,7 +31,7 @@ choice.forEach(button => button.addEventListener("click", () => {
 }));
 
 function updateCounters(type) {
-  if (databaseOnline !== true && player !== undefined) { //Ha az adatbázis elérhető az ott tárolt értékeket írja ki, különben az offlin értékeket.
+  if (player !== undefined) { //Ha az adatbázis elérhető az ott tárolt értékeket írja ki, különben az offlin értékeket.
     switch(type) { //Offline értékek.
       case 1:
         rockCount++;
